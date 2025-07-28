@@ -369,6 +369,8 @@
 
 
   function renderMessagepage() {
+    //初始化的时候是没颜色的
+    
     const MessagePage = document.getElementsByClassName('Message-page')[0];
 
     const Userpage = document.getElementsByClassName('User-page')[0];
@@ -994,7 +996,11 @@
     console.log(hash);
     switch (hash) {
       case '#Message': {
+        document.querySelectorAll('.Message-page .group')
+        .forEach(g => g.style.backgroundColor = 'transparent');
         renderMessagepage()
+        
+        
         break
       }
       case '#User': {
