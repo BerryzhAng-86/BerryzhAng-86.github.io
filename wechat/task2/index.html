@@ -43,7 +43,7 @@
       <div class="group" id="0">
         <img src="./assets/document_transfer.svg" class="document_transfer" alt="">
         <div class="'show_info">
-          <div class="in_show_info_p" style="font-weight: bold;margin-top: 10px;">
+          <div class="in_show_info_p" style="font-weight: bold;margin-top: 20px;">
             文件传输助手
           </div>
           <p class="hidden_show_info_p">
@@ -409,12 +409,20 @@
         }
         location.hash = `#Message?id=${this.id}`
         this.style.backgroundColor = 'rgb(225, 221, 227)'
-        //改变聊天的名字
-        const headerSpan = document.querySelector('.header_span')
-        const nameWrap = document.querySelector(`.User-page .user-change[id="${this.id}"]`);
-        const name = nameWrap.querySelector('.in_show_info_p_create')
-        headerSpan.textContent = name.textContent
+
         const parse = parseHash(location.hash)
+        //改变聊天的名字
+        fetch('https://jsonplaceholder.typicode.com/users')
+          .then(res => res.json())
+          .then(data => {
+            const nameSpan = document.querySelector('.header_span');
+            data.forEach(element => {
+              if (element.id == parse.id) {
+                nameSpan.innerText = element.username
+
+              }
+            })
+          })
         if (messageMap[parse.id]) {
           messageMap[parse.id].forEach(msg => {
             const messageDiv = document.createElement('div');
@@ -498,6 +506,19 @@
                 let messageMap = JSON.parse(localStorage.getItem('messageMap') || '{}');
                 location.hash = `#Message?id=${this.id}`
                 this.style.backgroundColor = 'rgb(225, 221, 227)'
+                //改名字
+                fetch('https://jsonplaceholder.typicode.com/users')
+                  .then(res => res.json())
+                  .then(data => {
+                    const nameSpan = document.querySelector('.header_span');
+                    data.forEach(element => {
+                      if (element.id == parseHash(location.hash).id) {
+                        nameSpan.innerText = element.username
+
+                      }
+                    })
+                  })
+
                 if (messageMap[this.id]) {
                   messageMap[this.id].forEach(msg => {
                     const messageDiv = document.createElement('div');
@@ -714,6 +735,15 @@
               document.querySelectorAll('.sendMessageWrap').forEach((sendMessageWrap) => {
                 sendMessageWrap.style.backgroundColor = 'transparent'
               })
+
+              const nameSpan = document.querySelector('.header_span');
+
+              if (element.id == parseHash(location.hash).id) {
+                nameSpan.innerText = element.username
+
+              }
+
+
               //用户传输助手也变透明
               const fileGroup = document.querySelector('.Message-page .group[id="0"]');
               fileGroup.style.backgroundColor = 'transparent';
@@ -931,8 +961,7 @@
     while (mainIn.firstChild) {
       mainIn.removeChild(mainIn.firstChild);
     }
-    //改变框的颜色
-    wrap.style.backgroundColor = 'rgb(225, 221, 227)'
+
     if (messageMap[parse.id]) {
       console.log(messageMap[parse.id]);
 
