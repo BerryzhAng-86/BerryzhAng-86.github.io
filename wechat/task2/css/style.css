@@ -13,6 +13,16 @@
       height: 784px;
       width: 1112px;
     }
+      .Message-page{
+      display: flex;
+      height: 784px;
+      width: 1112px;
+    }
+        .User-page{
+      display: none;
+      height: 784px;
+      width: 1112px;
+    }
     .aside{
       height: 784px;
       width: 60px;;
@@ -25,6 +35,7 @@
       height: 784px;
       width: 261px;;
       background-color: rgb(247, 247, 247);
+      overflow: auto;
     }
     .right_side{
       
@@ -34,12 +45,137 @@
       display: flex;
       flex-direction: column;
     }
-    .img_others{
+    #user_right{
+      
+      height: 784px;
+      width: 791px;;
+      background-color: rgb(243, 243, 243);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    #Message{
       width: 23px;
       height: 23px;
       margin-left: 17px;
       margin-right: 12px;
-      margin-top: 25px
+      margin-top: 25px;
+      background: url('../assets/Message.svg') center center;
+      background-size: contain; 
+      background-repeat: no-repeat;
+      border: none;
+    }
+    #Friends{
+      width: 23px;
+      height: 23px;
+      margin-left: 17px;
+      margin-right: 12px;
+      margin-top: 20px;
+      background: url('../assets/Friends.svg');
+      background-size: contain; 
+      background-repeat: no-repeat;
+      border: none;
+    }
+    #assets{
+      width: 23px;
+      height: 23px;
+      margin-left: 17px;
+      margin-right: 12px;
+      margin-top: 25px;
+      background: url('../assets/tool.svg');
+      background-size: contain; 
+      background-repeat: no-repeat;
+      border: none;
+    }
+    #info{
+      width: 23px;
+      height: 23px;
+      margin-left: 17px;
+      margin-right: 12px;
+      margin-top: 25px;
+      background: url('../assets/info.svg');
+      background-size: contain; 
+      background-repeat: no-repeat;
+      border: none;
+    }
+    #frends_group{
+      width: 23px;
+      height: 23px;
+      margin-left: 17px;
+      margin-right: 12px;
+      margin-top: 25px;
+      background: url('../assets/frends_group.svg');
+      background-size: contain; 
+      background-repeat: no-repeat;
+      border: none;
+    }
+        #video{
+      width: 23px;
+      height: 23px;
+      margin-left: 17px;
+      margin-right: 12px;
+      margin-top: 25px;
+      background: url('../assets/video.svg');
+      background-size: contain; 
+      background-repeat: no-repeat;
+      border: none;
+    }
+        #have_look{
+      width: 23px;
+      height: 23px;
+      margin-left: 17px;
+      margin-right: 12px;
+      margin-top: 25px;
+      background: url('../assets/have_look.svg');
+      background-size: contain; 
+      background-repeat: no-repeat;
+      border: none;
+    }
+        #search{
+      width: 23px;
+      height: 23px;
+      margin-left: 17px;
+      margin-right: 12px;
+      margin-top: 25px;
+      background: url('../assets/search.svg');
+      background-size: contain; 
+      background-repeat: no-repeat;
+      border: none;
+    }
+        #small_project{
+      width: 23px;
+      height: 23px;
+      margin-left: 17px;
+      margin-right: 12px;
+      margin-top: 120px;
+      background: url('../assets/small_project.svg');
+      background-size: contain; 
+      background-repeat: no-repeat;
+      border: none;
+    }        
+    #phone{
+      width: 23px;
+      height: 23px;
+      margin-left: 17px;
+      margin-right: 12px;
+      margin-top: 25px;
+      background: url('../assets/phone.svg');
+      background-size: contain; 
+      background-repeat: no-repeat;
+      border: none;
+    }
+    #setting{
+      width: 23px;
+      height: 23px;
+      margin-left: 17px;
+      margin-right: 12px;
+      margin-top: 25px;
+      background: url('../assets/setting.svg');
+      background-size: contain; 
+      background-repeat: no-repeat;
+      border: none;
     }
   .red_-bubble{
     background-color: red;
@@ -54,13 +190,7 @@
         align-items: center;
         justify-content: center
   }
-  .img_bottom_marge{
-    width: 23px;
-      height: 23px;
-      margin-left: 17px;
-      margin-right: 12px;
-      margin-top: 120px
-  }
+
   .img_top_marge{
       width: 34px;
       height: 37px;
@@ -106,13 +236,31 @@
     display: flex;
     width: 100%;
     height: 69px;
-    background: rgb(234, 234, 234)
+    background: 'rgb(225, 221, 227)'
+  }
+  #user-group{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 69px;
+    background: transparent;
   }
   .document_transfer{
     width: 36px;
     height: 36px;
     margin-top: 15px;
     margin-left: 15px;
+  }
+    .document_transfer-ach{
+    width: 36px;
+    height: 36px;
+    margin-top: 15px;
+    margin-left: 15px;
+    background-color: antiquewhite;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    display: flex;
   }
 
   .show_info{
@@ -124,6 +272,25 @@
     margin-top: 10px; font-size: 15px;margin-left: 10px;
     color: rgb(50, 50, 50);display: flex;flex-direction: column;
   }
+    #in_show_info_p_user{
+    margin-top: 20px; 
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 10px;
+    color: rgb(50, 50, 50);
+    display: flex;
+    flex-direction: column;
+  }
+  .in_show_info_p_create{
+    margin-top: 20px; 
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 10px;
+    color: rgb(50, 50, 50);
+    display: flex;
+    flex-direction: column;
+  }
+  
   .hidden_show_info_p{
     font-size: 10px;
     margin-top: 5px;
@@ -153,8 +320,10 @@
       border: 1px solid rgb(234, 234, 234);
       display: flex;
       flex-direction: column;
+      overflow: auto;
   }
   .p_in_main{
+    position: relative;
     align-items: center;
     justify-self: center;
     font-size: 10px; 
@@ -165,6 +334,7 @@
   .Message{
     display: flex;
     flex-direction: row-reverse;
+    position: relative;
   }
   .img_in_message{
     width: 34px;
@@ -174,25 +344,48 @@
     margin-top: 20px;
   }
   .bubble{
-  background: url(../assets/chat_bubble.svg) no-repeat right top;
-  background-size: contain;
-  width: 100px;
-  height: 37px;
-  color: #333;
-  font-size: 10px;
+  position: relative;
+  padding: 10px 25px;
+  min-height: 37px;
+  background-color: rgb(76, 156, 76);
+  color: white;
+  font-size: 14px;
   border-radius: 10px;
   margin-top: 20px;
   margin-right: 10px;
   display: flex;
   align-items: center;
-  justify-content: center;     
+  justify-content: center;
+  max-width: 350px;   
+  }
+  .trangle{
+          height: 0;
+          width: 0; 
+          position: absolute;
+          border-left: 15px solid rgb(78, 173, 78); 
+          border-right: 10px solid transparent;
+          border-top: 10px solid transparent;
+          border-bottom: 10px solid transparent;
+          margin-top: 25px;
+          margin-right: 50px;
   }
   .footer{
    display: flex;
+   flex-direction: column;
   }
   .chat_img{
     width: 20px; 
     height: 20px; 
     margin-left: 18px;
+    margin-top: 20px;
+  }
+  .text-area{
+    background-color: transparent;
+    height: 100%;
+    border: none;
+    outline: none;
+    color: black;
+    font-size: 14px;
+    margin-left: 30px;
     margin-top: 20px;
   }

@@ -1,77 +1,1133 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Task2 Wechat Page</title>
   <link rel="stylesheet" href="./css/style.css">
-  
 
-  
+
+
 </head>
 
 <body>
-  <div class="main">
+
+
+
+  <section class="Message-page">
     <div class="aside">
       <img src="./assets/avatar.jpg" alt="" class="img_top_marge">
-      
-      <img src="./assets/Message.svg" alt="" class="img_others">
-      <img src="./assets/Friends.svg" alt="" class="img_others">
-      <img src="./assets/tool.svg" alt="" class="img_others">
-      <img src="./assets/info.svg" alt="" class="img_others">
-      
-      <img src="./assets/frends_group.svg" alt="" class="img_others">
-      <span class="red_-bubble" >1</span>
-      <img src="./assets/video.svg" alt="" class="img_others">
-      <img src="./assets/have_look.svg" alt="" class="img_others">
-      <img src="./assets/search.svg" alt="" class="img_others">
-      <img src="./assets/small_project.svg" alt="" class="img_bottom_marge" >
-      <img src="./assets/phone.svg" alt="" class="img_others">
-      <img src="./assets/setting.svg" alt="" class="img_others">
-      
+
+      <button onclick="location.hash='#Message'" id="Message" class="img_others">
+        <button onclick="location.hash='#User'" id="Friends" class="img_others">
+          <button id="assets" class="img_others">
+            <button id="info" class="img_others">
+
+              <button id="frends_group" class="img_others">
+                <span class="red_-bubble">1</span>
+                <button id="video" class="img_others">
+                  <button id="have_look" class="img_others">
+                    <button id="search" class="img_others">
+                      <button id="small_project" class="img_bottom_marge">
+                        <button id="phone" class="img_others">
+                          <button id="setting" class="img_others">
+
     </div>
 
-    <div class="middle">
+    <div class="middle" id="middle-message">
       <div class="search">
-       <input type="text" class="search_input"  placeholder="搜索" >
-       <button class="add_group" >
+        <input type="text" class="search_input" placeholder="搜索">
+        <button class="add_group">
       </div>
-      <div class="group">
-        <img src="./assets/document_transfer.svg" class="document_transfer"  alt="">
-        <div class="'show_info" >
-          <p class="in_show_info_p" >
-               文件传输助手
+      <div class="group" id="0">
+        <img src="./assets/document_transfer.svg" class="document_transfer" alt="">
+        <div class="'show_info">
+          <div class="in_show_info_p" style="font-weight: bold;margin-top: 10px;">
+            文件传输助手
+          </div>
+          <p class="hidden_show_info_p">
+
           </p>
-          <p class="hidden_show_info_p" >
-            This is an Message
-          </p>
-        </div>  
-        <div class="group_time" >
+        </div>
+        <div class="group_time">
           20:49
         </div>
       </div>
     </div>
 
     <div class="right_side">
-      <div class="header" >
-        <span class="header_span" >文件传输助手</span>
+      <div class="header">
+        <span class="header_span">文件传输助手</span>
       </div>
-      <div class="main-in" >
-        <p class="p_in_main" >20:49</p>  
-        <div class="Message" >
-          <img class="img_in_message" src="./assets/avatar.jpg" alt="" >
-          <div class="bubble" >This is a Message</div>
+      <div class="main-in">
+        <p class="p_in_main">20:49</p>
+        <div class="Message">
+          <img class="img_in_message" src="./assets/avatar.jpg" alt="">
+          <div class="trangle"></div>
+          <div class="bubble">This is a Message. asdfasdf .This is a Message asdfasdfThis is a Message asdfa sdfThis is
+            a Message asdfasdf</div>
         </div>
-    </div>
+      </div>
 
-      <div class="footer" >
-        <img src="./assets/motion.svg" alt="" class="chat_img" >
-        <img src="./assets/send_floder.svg" alt="" class="chat_img">
-        <img src="./assets/cut_figure.svg" alt="" class="chat_img">
-        <img src="./assets/chat.svg" alt="" class="chat_img">
+      <div class="footer">
+        <div class="footer-main" style="display: flex; flex-direction: row;">
+          <img src="./assets/motion.svg" alt="" class="chat_img">
+          <img src="./assets/send_floder.svg" alt="" class="chat_img">
+          <img src="./assets/cut_figure.svg" alt="" class="chat_img">
+          <img src="./assets/chat.svg" alt="" class="chat_img">
+
+
+        </div>
+        <textarea class="text-area" name="" id=""></textarea>
+
       </div>
 
     </div>
-  </div>
+  </section>
+
+  <!-- 点击第二个图标后会跳转的页面 -->
+  <section class="User-page">
+    <div class="aside">
+      <img src="./assets/avatar.jpg" alt="" class="img_top_marge">
+
+      <button onclick="location.hash='#Message'" id="Message" class="img_others"></button>
+      <button onclick="location.hash='#User'" id="Friends" class="img_others"></button>
+      <button id="assets" class="img_others"></button>
+      <button id="info" class="img_others"></button>
+
+      <button id="frends_group" class="img_others"></button>
+      <span class="red_-bubble">1</span>
+      <button id="video" class="img_others"></button>
+      <button id="have_look" class="img_others"></button>
+      <button id="search" class="img_others"></button>
+      <button id="small_project" class="img_bottom_marge"></button>
+      <button id="phone" class="img_others"></button>
+      <button id="setting" class="img_others"></button>
+
+    </div>
+
+    <div class="middle">
+      <div class="search">
+        <input type="text" class="search_input" placeholder="搜索">
+        <button class="add_group">
+      </div>
+      <div class="group" id="user-group">
+        <div style="display: flex; padding-bottom: 10px;" class="user-change" id="0">
+          <img src="./assets/document_transfer.svg" class="document_transfer" alt="">
+          <div class="'show_info">
+            <p class="in_show_info_p" id="in_show_info_p_user">
+              文件传输助手
+            </p>
+
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+
+    <div class="right_side" id="user_right">
+
+      <img src="./assets/user-chat.svg" alt="" id="user-chat">
+    </div>
+
+    </div>
+  </section>
+
+  <!-- 在点击用户div后跳的详细信息界面 -->
+
+
+
+
+
 </body>
+
+
+<script>
+  //渲染消息页面
+
+  //建立全局变量统计多少用户被创建
+  let creatId = JSON.parse(localStorage.getItem('createId') || '[]');
+
+  //刷新页面的时候保存或者切换用户的时候保存聊天信息
+
+
+  let raw = localStorage.getItem('messageMap');
+  let messageMap;
+  if (raw) {
+    messageMap = JSON.parse(raw);
+  } else {
+    // 第一次：初始化并持久化
+    messageMap = { "0": [{ text: "This is a Message…" }] };
+    localStorage.setItem('messageMap', JSON.stringify(messageMap));
+  }
+
+  //初始化文件传输助手列表
+
+  //全局变量，用户的头像颜色
+  let colourMap = JSON.parse(localStorage.getItem('colourMap') || '{}');
+
+  const sendMesDiv = document.querySelector('.User-page .user-change[id="0"]');
+  sendMesDiv.addEventListener('click', () => {
+    document.querySelectorAll('.user-change').forEach(div => {
+      div.style.backgroundColor = 'transparent'
+    })
+    //设置背景颜色
+    sendMesDiv.style.backgroundColor = 'rgb(225, 221, 227)';
+    //拿到id
+    location.hash = `#User?id=${sendMesDiv.id}`
+    const Userpage = document.getElementsByClassName('User-page')[0];
+    const mainPage = document.getElementsByClassName('main')[0];
+    const MessagePage = document.getElementsByClassName('Message-page')[0];
+    const userInfopage = document.querySelector('#user_right');
+    const btn = Userpage.querySelector('#Friends');
+    btn.style.background = "url('./assets/frends-change.svg') center center / contain no-repeat";
+    const btnMessage = Userpage.querySelector('#Message');
+    btnMessage.style.background = "url('./assets/message-change.svg') center center / contain no-repeat";
+
+    const userChatimg = document.querySelector('#user-chat');
+    userChatimg.style.display = 'none';
+    userInfopage.style.justifyContent = 'flex-start';
+    userInfopage.style.alignItems = 'flex-start';
+    //聊天框姓名设置
+    const nameDiv = document.querySelector('.header_span')
+    nameDiv.innerText = '文件传输助手'
+    if (currentUserInfoWrap) {
+      // 已存在，直接修改
+      const AchWord = currentUserInfoWrap.querySelector('.ach-word');
+      const userName = currentUserInfoWrap.querySelector('.userName');
+      const phoneNumber = currentUserInfoWrap.querySelector('.phoneNumber');
+      const name = currentUserInfoWrap.querySelector('.name');
+      userName.innerText = ''
+      name.innerText = ''
+      phoneNumber.innerText = ''
+      AchWord.innerText = '';
+      AchWord.style.backgroundColor = 'transparent';
+
+      infoId = sendMesDiv.id;
+    } else {
+      // 第一次创建
+      const wrap = document.createElement('div');
+      wrap.style.width = '445px';
+      wrap.style.marginTop = '0';
+      wrap.style.position = 'relative';
+      wrap.style.height = '125px';
+      wrap.style.display = 'flex';
+      wrap.style.borderBottom = '1px solid rgb(234,234,234)'
+      wrap.style.marginLeft = '200px'
+
+      wrap.className = 'has-information';
+
+      const wrapAchWord = document.createElement('div');
+      wrapAchWord.style.position = 'relative';
+      wrapAchWord.style.display = 'flex';
+      wrapAchWord.style.flexDirection = 'row'
+
+      const AchWord = document.createElement('div');
+      AchWord.innerText = '';
+      AchWord.style.backgroundColor = 'none';
+      AchWord.style.height = '70px';
+      AchWord.style.width = '70px';
+      AchWord.style.display = 'flex';
+      AchWord.style.marginTop = '27px'
+      AchWord.style.borderRadius = '8px'
+
+
+      AchWord.style.justifyContent = 'center';
+      AchWord.style.alignItems = 'center';
+      AchWord.className = 'ach-word';  // 记得打标识以便更新
+      //旁边的具体信息
+      const aside = document.createElement('div');
+      aside.style.display = 'flex';
+      aside.style.flexDirection = 'column'
+      aside.className = 'aside-info'
+      aside.style.marginTop = '27px'
+      aside.style.marginLeft = '15px'
+
+      //创建姓名，昵称和电话号div
+      const userName = document.createElement('div');
+      const name = document.createElement('div');
+      const phoneNumber = document.createElement('div');
+      userName.className = 'userName'
+      name.className = 'name'
+      phoneNumber.className = 'phoneNumber'
+      userName.innerText = ''
+      name.innerText = ''
+      phoneNumber.innerText = ''
+      phoneNumber.style.marginTop = '8px'
+      name.style.marginTop = '8px'
+      name.style.color = 'rgb(192, 192, 192)'
+      phoneNumber.style.color = 'rgb(192, 192, 192)'
+      userName.style.fontWeight = 'bold'
+      name.style.fontSize = '10px'
+      phoneNumber.style.fontSize = '10px'
+
+      wrapAchWord.appendChild(AchWord);
+      aside.appendChild(userName)
+      aside.appendChild(name)
+      aside.appendChild(phoneNumber)
+      wrapAchWord.appendChild(aside)
+      wrap.appendChild(wrapAchWord);
+      userInfopage.appendChild(wrap);
+
+      //创建下方的包裹元素
+      const sendMessageWrap = document.createElement('div')
+      sendMessageWrap.style.display = 'flex'
+      sendMessageWrap, className = 'sendMessageWrap'
+      //创建messa的包裹元素，包括一张图片和发送信息文字
+      const MessageWrap = document.createElement('div')
+      MessageWrap.style.display = 'flex'
+      MessageWrap.style.flexDirection = 'column'
+      MessageWrap.style.marginLeft = '290px'
+      MessageWrap.style.marginTop = '10px'
+      //创建信息div
+      const messageIcon = document.createElement('div')
+      messageIcon.style.height = '44px'
+      messageIcon.style.width = '44px'
+      messageIcon.style.background = 'url(./assets/sendMessageicon.svg) no-repeat';
+      messageIcon.style.backgroundSize = 'contain'
+      messageIcon.className = 'messageIcon'
+
+      const messageContext = document.createElement('div')
+      messageContext.innerText = '发消息'
+      messageContext.style.fontSize = '14px'
+
+      //创建访问网站divwrap
+      const viewNetWrap = document.createElement('div')
+      viewNetWrap.style.display = 'flex'
+      viewNetWrap.style.flexDirection = 'column'
+      viewNetWrap.style.marginLeft = '190px'
+      viewNetWrap.style.marginTop = '10px'
+      //访问网站的图标和下方文字
+      const viewNetIcon = document.createElement('div')
+      viewNetIcon.style.height = '44px'
+      viewNetIcon.style.width = '44px'
+      viewNetIcon.style.background = 'url(./assets/viewNet.svg) no-repeat';
+      viewNetIcon.style.backgroundSize = 'contain'
+      viewNetIcon.className = 'viewNetIcon'
+      const viewNetContext = document.createElement('div')
+      viewNetContext.innerText = '访问网站'
+      viewNetContext.style.fontSize = '14px'
+
+      //
+      MessageWrap.appendChild(messageIcon)
+      MessageWrap.appendChild(messageContext)
+      viewNetWrap.appendChild(viewNetIcon)
+      viewNetWrap.appendChild(viewNetContext)
+
+      sendMessageWrap.appendChild(MessageWrap)
+      sendMessageWrap.appendChild(viewNetWrap)
+      userInfopage.appendChild(sendMessageWrap)
+      currentUserInfoWrap = wrap;
+      currentSendMessageWrap = sendMessageWrap // 设置全局引用
+      infoId = sendMesDiv.id;
+    }
+
+    //下方的聊天跳转按钮
+    document.querySelector('.messageIcon').onclick = () => { changeMessagePage(sendMesDiv.id) }
+
+
+
+  })
+
+  //message 页面的点击文件传输助手逻辑
+  const fileGroup = document.querySelector('.Message-page .group[id="0"]');
+
+
+  fileGroup.addEventListener('click', function () {
+    //清掉所有 .group 的高亮
+    document.querySelectorAll('.Message-page .group')
+      .forEach(g => g.style.backgroundColor = 'transparent');
+
+    document.querySelectorAll('.userChange').forEach(element => {
+
+      element.style.backgroundColor = 'transparent'
+    })
+
+    // 2. 给自己加高亮
+    this.style.backgroundColor = 'rgb(225, 221, 227)';
+
+    // 3. 保存／切换 id=0 的对话
+    //    确保 messageMap[0] 存在
+    let messageMap = JSON.parse(localStorage.getItem('messageMap') || '{}');
+    if (!messageMap[0]) messageMap[0] = [];
+    localStorage.setItem('messageMap', JSON.stringify(messageMap));
+
+    // 4. 跳到 Message 页面并渲染 0 号对话
+    location.hash = '#Message?id=0';
+    //变自己的名字
+
+    const nameSpan = document.querySelector('.header_span');
+
+    nameSpan.innerText = '文件传输助手'
+
+    renderMessagepage();
+    renderOldpage();
+  });
+
+
+  function renderMessagepage() {
+    const MessagePage = document.getElementsByClassName('Message-page')[0];
+
+    const Userpage = document.getElementsByClassName('User-page')[0];
+
+    const btn = MessagePage.querySelector('#Message')
+    //btn.style.style.background = "url('./assets/message-change.svg') center center / contain no-repeat";
+    const btnFriends = Userpage.querySelector('#Friends');
+    btnFriends.style.background = "url('./assets/Friends.svg') center center / contain no-repeat";
+
+    Userpage.style.display = 'none';
+
+    MessagePage.style.display = 'flex';
+
+    //拿到地址的id
+    const hash = location.hash
+    parse = parseHash(hash)
+    console.log(parse);
+    //初始化透明
+    document.querySelectorAll('.userChange').forEach((div) => {
+      div.style.backgroundColor = 'transparent'
+    })
+
+    //点击事件，点了变色，渲染div
+    document.querySelectorAll('.userChange').forEach(element => {
+
+      element.addEventListener('click', function () {
+        //文件传输助手变透明
+        const fileGroup = document.querySelector('.Message-page .group[id="0"]');
+        fileGroup.style.backgroundColor = 'transparent'
+        let messageMap = JSON.parse(localStorage.getItem('messageMap') || '{}');
+        document.querySelectorAll('.userChange').forEach(element => {
+
+          element.style.backgroundColor = 'transparent'
+        })
+        const mainIn = document.querySelector('.main-in');
+        while (mainIn.firstChild) {
+          mainIn.removeChild(mainIn.firstChild);
+        }
+        location.hash = `#Message?id=${this.id}`
+        this.style.backgroundColor = 'rgb(225, 221, 227)'
+        //改变聊天的名字
+        const headerSpan = document.querySelector('.header_span')
+        const nameWrap = document.querySelector(`.User-page .user-change[id="${this.id}"]`);
+        const name = nameWrap.querySelector('.in_show_info_p_create')
+        headerSpan.textContent = name.textContent
+        const parse = parseHash(location.hash)
+        if (messageMap[parse.id]) {
+          messageMap[parse.id].forEach(msg => {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'Message';
+
+            const avatar = document.createElement('img');
+            avatar.className = 'img_in_message';
+            avatar.src = './assets/avatar.jpg';
+
+            const triangle = document.createElement('div');
+            triangle.className = 'trangle';
+
+            const bubble = document.createElement('div');
+            bubble.className = 'bubble';
+            bubble.innerText = msg.text;
+
+            messageDiv.appendChild(avatar);
+            messageDiv.appendChild(triangle);
+            messageDiv.appendChild(bubble);
+
+            mainIn.appendChild(messageDiv);
+          });
+        }
+
+
+
+      })
+    })
+    //fetch 地址信息，判断哪个id需要创建
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then(res => res.json())
+      .then(data => {
+        data.forEach(element => {
+
+          let colourMap = JSON.parse(localStorage.getItem('colourMap') || '{}')
+          //如果没创建过就创建
+          if (element.id == parse.id && (creatId.indexOf(element.id) == -1)) {
+            console.log(element.id);
+            const middle = document.querySelector('#middle-message')
+            const wrap = document.createElement('div');
+            const achname = document.createElement('div');
+            const username = document.createElement('p');
+
+            achname.className = 'document_transfer-ach';
+            achname.style.backgroundColor = colourMap[element.id];
+            wrap.style.display = 'flex';
+            wrap.style.width = '100%';
+            wrap.style.height = '69px';
+            wrap.className = 'userChange';
+            wrap.style.alignItems = 'center';       // 垂直居中
+            wrap.style.backgroundColor = 'rgb(225, 221, 227)'
+            wrap.id = element.id
+
+
+
+            achname.innerText = element.username[0];
+            achname.style.borderRadius = '8px'
+            wrap.style.paddingBottom = '15px'
+            username.innerText = element.username;
+            username.style.marginBottom = '5px'
+            username.className = 'in_show_info_p_create';
+
+            wrap.appendChild(achname);
+            wrap.appendChild(username);
+            middle.appendChild(wrap);
+            const mainIn = document.querySelector('.main-in');
+            while (mainIn.firstChild) {
+              mainIn.removeChild(mainIn.firstChild);
+            }
+
+            document.querySelectorAll('.userChange').forEach(element => {
+
+              element.addEventListener('click', function () {
+                document.querySelectorAll('.userChange').forEach(element => {
+                  element.style.backgroundColor = 'transparent'
+                })
+                const mainIn = document.querySelector('.main-in');
+                while (mainIn.firstChild) {
+                  mainIn.removeChild(mainIn.firstChild);
+                }
+                let messageMap = JSON.parse(localStorage.getItem('messageMap') || '{}');
+                location.hash = `#Message?id=${this.id}`
+                this.style.backgroundColor = 'rgb(225, 221, 227)'
+                if (messageMap[this.id]) {
+                  messageMap[this.id].forEach(msg => {
+                    const messageDiv = document.createElement('div');
+                    messageDiv.className = 'Message';
+
+                    const avatar = document.createElement('img');
+                    avatar.className = 'img_in_message';
+                    avatar.src = './assets/avatar.jpg';
+
+                    const triangle = document.createElement('div');
+                    triangle.className = 'trangle';
+
+                    const bubble = document.createElement('div');
+                    bubble.className = 'bubble';
+                    bubble.innerText = msg.text;
+
+                    messageDiv.appendChild(avatar);
+                    messageDiv.appendChild(triangle);
+                    messageDiv.appendChild(bubble);
+
+                    mainIn.appendChild(messageDiv);
+                  });
+                }
+
+
+
+              })
+            })
+
+            creatId.push(element.id);
+
+
+            localStorage.setItem('createId', JSON.stringify(creatId));
+
+
+          }
+
+        })
+      })
+    renderOldpage()
+  }
+  //点击wrap的时候切换用户
+
+  //回车输入文字的函数
+  function keyDownWrite() {
+    const textArea = document.querySelector('.text-area');
+    const main = document.querySelector('.main-in');
+    //拿到hashid
+    const id = parseHash(location.hash).id
+    //如果内存没有id则创建id
+    if (!messageMap[id]) {
+      messageMap[id] = []
+
+    }
+
+    textArea.addEventListener('keydown', function (event) {
+      let messageMap = JSON.parse(localStorage.getItem('messageMap') || '{}');
+      if (event.key === 'Enter' && !event.shiftKey) {
+        event.preventDefault();
+        const id = parseHash(location.hash).id;
+        const text = textArea.value.trim();
+
+        if (!messageMap[id]) {
+          messageMap[id] = [];  // 新用户初始化
+        }
+
+        if (text !== '') {
+          const messageDiv = document.createElement('div');
+          messageDiv.className = 'Message';
+
+          const avatar = document.createElement('img');
+          avatar.className = 'img_in_message';
+          avatar.src = './assets/avatar.jpg';
+
+          const triangle = document.createElement('div');
+          triangle.className = 'trangle';
+
+          const bubble = document.createElement('div');
+          bubble.className = 'bubble';
+          bubble.innerText = text;
+
+          messageMap[id].push({ text });
+          localStorage.setItem('messageMap', JSON.stringify(messageMap));
+
+
+          messageDiv.appendChild(avatar);
+          messageDiv.appendChild(triangle);
+          messageDiv.appendChild(bubble);
+
+          main.appendChild(messageDiv);
+          textArea.value = '';
+          main.scrollTop = main.scrollHeight;
+
+
+        }
+      }
+    });
+
+
+
+
+
+
+  }
+
+
+
+  //拿到页面后的hashid
+  function parseHash(hash) {
+    if (hash.startsWith('#')) {
+      hash = hash.substring(1);
+    }
+
+    const [page, queryString] = hash.split('?');
+    const params = {};
+
+    if (queryString) {
+      queryString.split('&').forEach(param => {
+        const [key, value] = param.split('=');
+        params[key] = decodeURIComponent(value);
+      });
+    }
+
+    return {
+      page,
+      ...params
+    };
+  }
+  //让渲染只执行一次
+  let ifUserRender = false
+  //每次点击其他图标时，用户的具体信息页面就隐藏
+  let currentUserInfoWrap = null;
+  //每次的下方点击切换按钮
+  let currentSendMessageWrap = null
+
+  //渲染用户列表页面
+  function renderUserpage() {
+    //保证不重叠
+
+    if (currentUserInfoWrap) {
+      currentUserInfoWrap.style.display = 'none'
+      currentSendMessageWrap.style.display = 'none'
+    }
+    document.querySelectorAll('.user-change').forEach((userChange) => {
+      userChange.style.backgroundColor = 'transparent'
+    })
+    const Userpage = document.getElementsByClassName('User-page')[0];
+
+    const MessagePage = document.getElementsByClassName('Message-page')[0];
+
+
+    const btn = Userpage.querySelector('#Friends');
+    btn.style.background = "url('./assets/frends-change.svg') center center / contain no-repeat";
+    const btnMessage = Userpage.querySelector('#Message')
+    btnMessage.style.background = "url('./assets/message-change.svg') center center / contain no-repeat";
+
+    MessagePage.style.display = 'none';
+    const userInfopage = document.querySelector('#user_right');
+    userInfopage.style.justifyContent = 'center';
+    userInfopage.style.alignItems = 'center';
+
+    const userChatimg = document.querySelector('#user-chat')
+    userChatimg.style.display = 'flex'
+    Userpage.style.display = 'flex';
+
+
+
+    if (!ifUserRender) {
+      fetch('https://jsonplaceholder.typicode.com/users')
+        .then(res => res.json())
+        .then(data => {
+          const achid = document.querySelector('#user-group');
+
+          data.forEach(element => {
+            const wrap = document.createElement('div');
+            const achname = document.createElement('div');
+            const username = document.createElement('p');
+
+            function getRandomColor() {
+              const r = Math.floor(180 + Math.random() * 75);
+              const g = Math.floor(180 + Math.random() * 75);
+              const b = Math.floor(180 + Math.random() * 75);
+              return `rgb(${r},${g},${b})`;
+            }
+            if (!colourMap[element.id]) {
+              colourMap[element.id] = getRandomColor()
+              localStorage.setItem('colourMap', JSON.stringify(colourMap));
+            }
+            achname.className = 'document_transfer-ach';
+            achname.style.backgroundColor = colourMap[element.id];
+            wrap.style.display = 'flex';
+            wrap.style.width = '100%';
+            wrap.style.height = '69px';
+            wrap.className = 'user-change';
+            wrap.style.alignItems = 'center';       // 垂直居中
+
+
+
+            achname.innerText = element.username[0];
+            achname.style.borderRadius = '8px'
+            wrap.style.paddingBottom = '15px'
+            username.innerText = element.username;
+            username.style.marginBottom = '5px'
+            username.className = 'in_show_info_p_create';
+
+            wrap.appendChild(achname);
+            wrap.appendChild(username);
+
+            // 点击用户 div 改变 hash
+            wrap.onclick = function () {
+              document.querySelectorAll('.user-change').forEach((userChange) => {
+                userChange.style.backgroundColor = 'transparent'
+              })
+              document.querySelectorAll('.sendMessageWrap').forEach((sendMessageWrap) => {
+                sendMessageWrap.style.backgroundColor = 'transparent'
+              })
+              //用户传输助手也变透明
+              const fileGroup = document.querySelector('.Message-page .group[id="0"]');
+              fileGroup.style.backgroundColor = 'transparent';
+              location.hash = `#User?id=${element.id}`;
+              const parse = parseHash(location.hash);
+              wrap.style.backgroundColor = 'rgb(225, 221, 227)'
+
+              if (parse.id == element.id) {
+                renderUserinfoPage(element, colourMap[element.id]);
+                currentUserInfoWrap.style.display = 'flex'
+                currentSendMessageWrap.style.display = 'flex'
+              }
+            };
+            //给文件传输助手加载相关逻辑，让其可以点击并操作
+
+            achid.appendChild(wrap);
+
+
+
+          });
+        });
+    }
+    ifUserRender = true
+  }
+
+
+  let infoId = ''
+  //渲染点击后的详细页面
+  function renderUserinfoPage(element, backgroundcolor) {
+
+    const Userpage = document.getElementsByClassName('User-page')[0];
+    const mainPage = document.getElementsByClassName('main')[0];
+    const MessagePage = document.getElementsByClassName('Message-page')[0];
+    const userInfopage = document.querySelector('#user_right');
+    const btn = Userpage.querySelector('#Friends');
+    btn.style.background = "url('./assets/frends-change.svg') center center / contain no-repeat";
+    const btnMessage = Userpage.querySelector('#Message');
+    btnMessage.style.background = "url('./assets/message-change.svg') center center / contain no-repeat";
+
+    const userChatimg = document.querySelector('#user-chat');
+    userChatimg.style.display = 'none';
+    userInfopage.style.justifyContent = 'flex-start';
+    userInfopage.style.alignItems = 'flex-start';
+
+    if (currentUserInfoWrap) {
+      // 已存在，直接修改
+      const AchWord = currentUserInfoWrap.querySelector('.ach-word');
+      const userName = currentUserInfoWrap.querySelector('.userName');
+      const phoneNumber = currentUserInfoWrap.querySelector('.phoneNumber');
+      const name = currentUserInfoWrap.querySelector('.name');
+      userName.innerText = element.username
+      name.innerText = element.name
+      phoneNumber.innerText = element.phone
+      AchWord.innerText = element.username[0];
+      AchWord.style.backgroundColor = backgroundcolor;
+      infoId = element.id;
+    } else {
+      // 第一次创建
+      const wrap = document.createElement('div');
+      wrap.style.width = '445px';
+      wrap.style.marginTop = '0';
+      wrap.style.position = 'relative';
+      wrap.style.height = '125px';
+      wrap.style.display = 'flex';
+      wrap.style.borderBottom = '1px solid rgb(234,234,234)'
+      wrap.style.marginLeft = '200px'
+
+      wrap.className = 'has-information';
+
+      const wrapAchWord = document.createElement('div');
+      wrapAchWord.style.position = 'relative';
+      wrapAchWord.style.display = 'flex';
+      wrapAchWord.style.flexDirection = 'row'
+
+      const AchWord = document.createElement('div');
+      AchWord.innerText = element.username[0];
+      AchWord.style.backgroundColor = backgroundcolor;
+      AchWord.style.height = '70px';
+      AchWord.style.width = '70px';
+      AchWord.style.display = 'flex';
+      AchWord.style.marginTop = '27px'
+      AchWord.style.borderRadius = '8px'
+
+
+      AchWord.style.justifyContent = 'center';
+      AchWord.style.alignItems = 'center';
+      AchWord.className = 'ach-word';  // 记得打标识以便更新
+      //旁边的具体信息
+      const aside = document.createElement('div');
+      aside.style.display = 'flex';
+      aside.style.flexDirection = 'column'
+      aside.className = 'aside-info'
+      aside.style.marginTop = '27px'
+      aside.style.marginLeft = '15px'
+
+      //创建姓名，昵称和电话号div
+      const userName = document.createElement('div');
+      const name = document.createElement('div');
+      const phoneNumber = document.createElement('div');
+      userName.className = 'userName'
+      name.className = 'name'
+      phoneNumber.className = 'phoneNumber'
+      userName.innerText = element.username
+      name.innerText = element.name
+      phoneNumber.innerText = element.phone
+      phoneNumber.style.marginTop = '8px'
+      name.style.marginTop = '8px'
+      name.style.color = 'rgb(192, 192, 192)'
+      phoneNumber.style.color = 'rgb(192, 192, 192)'
+      userName.style.fontWeight = 'bold'
+      name.style.fontSize = '10px'
+      phoneNumber.style.fontSize = '10px'
+
+      wrapAchWord.appendChild(AchWord);
+      aside.appendChild(userName)
+      aside.appendChild(name)
+      aside.appendChild(phoneNumber)
+      wrapAchWord.appendChild(aside)
+      wrap.appendChild(wrapAchWord);
+      userInfopage.appendChild(wrap);
+
+      //创建下方的包裹元素
+      const sendMessageWrap = document.createElement('div')
+      sendMessageWrap.style.display = 'flex'
+      sendMessageWrap, className = 'sendMessageWrap'
+      //创建messa的包裹元素，包括一张图片和发送信息文字
+      const MessageWrap = document.createElement('div')
+      MessageWrap.style.display = 'flex'
+      MessageWrap.style.flexDirection = 'column'
+      MessageWrap.style.marginLeft = '290px'
+      MessageWrap.style.marginTop = '10px'
+      //创建信息div
+      const messageIcon = document.createElement('div')
+      messageIcon.style.height = '44px'
+      messageIcon.style.width = '44px'
+      messageIcon.style.background = 'url(./assets/sendMessageicon.svg) no-repeat';
+      messageIcon.style.backgroundSize = 'contain'
+      messageIcon.className = 'messageIcon'
+
+      const messageContext = document.createElement('div')
+      messageContext.innerText = '发消息'
+      messageContext.style.fontSize = '14px'
+
+      //创建访问网站divwrap
+      const viewNetWrap = document.createElement('div')
+      viewNetWrap.style.display = 'flex'
+      viewNetWrap.style.flexDirection = 'column'
+      viewNetWrap.style.marginLeft = '190px'
+      viewNetWrap.style.marginTop = '10px'
+      //访问网站的图标和下方文字
+      const viewNetIcon = document.createElement('div')
+      viewNetIcon.style.height = '44px'
+      viewNetIcon.style.width = '44px'
+      viewNetIcon.style.background = 'url(./assets/viewNet.svg) no-repeat';
+      viewNetIcon.style.backgroundSize = 'contain'
+      viewNetIcon.className = 'viewNetIcon'
+      const viewNetContext = document.createElement('div')
+      viewNetContext.innerText = '访问网站'
+      viewNetContext.style.fontSize = '14px'
+
+      //
+      MessageWrap.appendChild(messageIcon)
+      MessageWrap.appendChild(messageContext)
+      viewNetWrap.appendChild(viewNetIcon)
+      viewNetWrap.appendChild(viewNetContext)
+
+      sendMessageWrap.appendChild(MessageWrap)
+      sendMessageWrap.appendChild(viewNetWrap)
+      userInfopage.appendChild(sendMessageWrap)
+      currentUserInfoWrap = wrap;
+      currentSendMessageWrap = sendMessageWrap // 设置全局引用
+      infoId = element.id;
+    }
+
+    //下方的聊天跳转按钮
+    document.querySelector('.messageIcon').onclick = () => { changeMessagePage(element.id) }
+    console.log(element.phone);
+
+  }
+
+  //点击切换页面跳转用户message
+  function changeMessagePage(id) {
+    location.hash = `#Message?id=${id}`
+    const fileGroup = document.querySelector('.Message-page .group[id="0"]');
+    fileGroup.style.backgroundColor = 'transparent';
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then(res => res.json())
+      .then(data => {
+        const nameSpan = document.querySelector('.header_span');
+        data.forEach(element => {
+          if (element.id == parseHash(location.hash).id) {
+            nameSpan.innerText = element.username
+
+          }
+        })
+      })
+
+    renderMessagepage()
+
+
+  }
+
+
+  //如果有原消息就渲染
+  function renderOldpage() {
+    //拿到local仓库
+    let messageMap = JSON.parse(localStorage.getItem('messageMap') || '{}');
+    const mainIn = document.querySelector('.main-in');
+    const middle = document.querySelector('#middle-message');
+    const parse = parseHash(location.hash)
+    const wrap = document.getElementById(parse.id)
+
+
+    //清空聊天框内容
+    while (mainIn.firstChild) {
+      mainIn.removeChild(mainIn.firstChild);
+    }
+    //改变框的颜色
+    wrap.style.backgroundColor = 'rgb(225, 221, 227)'
+    if (messageMap[parse.id]) {
+      console.log(messageMap[parse.id]);
+
+      messageMap[parse.id].forEach(msg => {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = 'Message';
+
+        const avatar = document.createElement('img');
+        avatar.className = 'img_in_message';
+        avatar.src = './assets/avatar.jpg';
+
+        const triangle = document.createElement('div');
+        triangle.className = 'trangle';
+
+        const bubble = document.createElement('div');
+        bubble.className = 'bubble';
+        bubble.innerText = msg.text;
+
+        messageDiv.appendChild(avatar);
+        messageDiv.appendChild(triangle);
+        messageDiv.appendChild(bubble);
+
+        mainIn.appendChild(messageDiv);
+
+      });
+    }
+  }
+  window.onhashchange = function () {
+    const hash = window.location.hash
+    console.log(hash);
+    switch (hash) {
+      case '#Message': {
+        renderMessagepage()
+        break
+      }
+      case '#User': {
+        renderUserpage()
+        break
+      }
+
+
+    }
+
+  }
+
+
+
+
+
+
+  window.onload = () => {
+    // 恢复本地存储
+    let messageMap = JSON.parse(localStorage.getItem('messageMap') || '{}');
+    let creatId = JSON.parse(localStorage.getItem('createId') || '[]');
+    const mainIn = document.querySelector('.main-in');
+    const middle = document.querySelector('#middle-message');
+    const hash = location.hash
+    const currentId = parseHash(hash).id;
+
+    if (parseHash(hash).id == '0') {
+      const fileGroup = document.querySelector('.Message-page .group[id="0"]');
+      fileGroup.style.backgroundColor = 'rgb(225, 221, 227)';
+    }
+    // 清空消息区
+    while (mainIn.firstChild) {
+      mainIn.removeChild(mainIn.firstChild);
+    }
+    // 渲染当前用户的消息
+    if (messageMap[currentId]) {
+      messageMap[currentId].forEach(msg => {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = 'Message';
+
+        const avatar = document.createElement('img');
+        avatar.className = 'img_in_message';
+        avatar.src = './assets/avatar.jpg';
+
+        const triangle = document.createElement('div');
+        triangle.className = 'trangle';
+
+        const bubble = document.createElement('div');
+        bubble.className = 'bubble';
+        bubble.innerText = msg.text;
+
+        messageDiv.appendChild(avatar);
+        messageDiv.appendChild(triangle);
+        messageDiv.appendChild(bubble);
+
+        mainIn.appendChild(messageDiv);
+      });
+      //给新加载的wrap绑定onclik事件能拿到最新的localStorage
+
+    }
+
+    // 渲染所有用户（用户列表）
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then(res => res.json())
+      .then(data => {
+        //加载颜色
+        let colourMap = JSON.parse(localStorage.getItem('colourMap') || '{}')
+        creatId.forEach(id => {
+          if (!document.getElementById(id)) {
+            const element = data.find(e => e.id == id);
+            if (!element) return;
+
+            const wrap = document.createElement('div');
+            const achname = document.createElement('div');
+            const username = document.createElement('p');
+
+            achname.className = 'document_transfer-ach';
+            achname.style.backgroundColor = colourMap[id];
+            wrap.style.display = 'flex';
+            wrap.style.width = '100%';
+            wrap.style.height = '69px';
+            wrap.className = 'userChange';
+            wrap.style.alignItems = 'center';
+            wrap.style.backgroundColor = 'rgb(225, 221, 227)';
+            wrap.id = id;
+            achname.innerText = element.username[0];
+            achname.style.borderRadius = '8px';
+            wrap.style.paddingBottom = '15px';
+            username.innerText = element.username;
+            username.style.marginBottom = '5px';
+            username.className = 'in_show_info_p_create';
+
+            wrap.appendChild(achname);
+            wrap.appendChild(username);
+
+            middle.appendChild(wrap);
+
+            wrap.addEventListener('click', function () {
+              let messageMap = JSON.parse(localStorage.getItem('messageMap') || '{}');
+              //用户传输助手也变透明
+              const fileGroup = document.querySelector('.Message-page .group[id="0"]');
+              fileGroup.style.backgroundColor = 'transparent';
+              document.querySelectorAll('.userChange').forEach(div => {
+                div.style.backgroundColor = 'transparent';
+              });
+              this.style.backgroundColor = 'rgb(225, 221, 227)';
+              //改变名字函数
+              fetch('https://jsonplaceholder.typicode.com/users')
+                .then(res => res.json())
+                .then(data => {
+                  const nameSpan = document.querySelector('.header_span');
+                  data.forEach(element => {
+                    if (element.id == parseHash(location.hash).id) {
+                      nameSpan.innerText = element.username
+
+                    }
+                  })
+                })
+              // 渲染该用户消息
+              while (mainIn.firstChild) {
+                mainIn.removeChild(mainIn.firstChild);
+              }
+              if (messageMap[this.id]) {
+                messageMap[this.id].forEach(msg => {
+                  const messageDiv = document.createElement('div');
+                  messageDiv.className = 'Message';
+
+                  const avatar = document.createElement('img');
+                  avatar.className = 'img_in_message';
+                  avatar.src = './assets/avatar.jpg';
+
+                  const triangle = document.createElement('div');
+                  triangle.className = 'trangle';
+
+                  const bubble = document.createElement('div');
+                  bubble.className = 'bubble';
+                  bubble.innerText = msg.text;
+
+                  messageDiv.appendChild(avatar);
+                  messageDiv.appendChild(triangle);
+                  messageDiv.appendChild(bubble);
+
+                  mainIn.appendChild(messageDiv);
+                });
+              }
+              // 同步 hash
+              location.hash = `#Message?id=${this.id}`;
+            });
+            wrap.style.backgroundColor = 'transparent';
+            // 当前选中用户加高亮
+            if (id == currentId) {
+              wrap.style.backgroundColor = 'rgb(225, 221, 227)';
+            }
+          }
+        });
+      });
+  };
+
+
+
+  console.log(creatId);
+  keyDownWrite();
+</script>
+
 </html>
