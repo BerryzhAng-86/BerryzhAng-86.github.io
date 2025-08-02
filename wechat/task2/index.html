@@ -113,7 +113,7 @@
         <button class="add_group">
       </div>
       <div class="group" id="user-group">
-        <div style="display: flex; padding-bottom: 10px;" class="user-change" id="0">
+        <div style="display: flex; padding-bottom: 10px;" class="user-change" id="user_0">
           <img src="./assets/document_transfer.svg" class="document_transfer" alt="">
           <div class="'show_info">
             <p class="in_show_info_p" id="in_show_info_p_user">
@@ -169,168 +169,6 @@
   //全局变量，用户的头像颜色
   let colourMap = JSON.parse(localStorage.getItem('colourMap') || '{}');
 
-  const sendMesDiv = document.querySelector('.User-page .user-change[id="0"]');
-  sendMesDiv.addEventListener('click', () => {
-    document.querySelectorAll('.user-change').forEach(div => {
-      div.style.backgroundColor = 'transparent'
-    })
-    //设置背景颜色
-    sendMesDiv.style.backgroundColor = 'rgb(225, 221, 227)';
-    //拿到id
-    location.hash = `#User?id=${sendMesDiv.id}`
-    const Userpage = document.getElementsByClassName('User-page')[0];
-    const mainPage = document.getElementsByClassName('main')[0];
-    const MessagePage = document.getElementsByClassName('Message-page')[0];
-    const userInfopage = document.querySelector('#user_right');
-    const btn = Userpage.querySelector('#Friends');
-    btn.style.background = "url('./assets/frends-change.svg') center center / contain no-repeat";
-    const btnMessage = Userpage.querySelector('#Message');
-    btnMessage.style.background = "url('./assets/message-change.svg') center center / contain no-repeat";
-
-    const userChatimg = document.querySelector('#user-chat');
-    userChatimg.style.display = 'none';
-    userInfopage.style.justifyContent = 'flex-start';
-    userInfopage.style.alignItems = 'flex-start';
-    //聊天框姓名设置
-    const nameDiv = document.querySelector('.header_span')
-    nameDiv.innerText = '文件传输助手'
-    if (currentUserInfoWrap) {
-      // 已存在，直接修改
-      const AchWord = currentUserInfoWrap.querySelector('.ach-word');
-      const userName = currentUserInfoWrap.querySelector('.userName');
-      const phoneNumber = currentUserInfoWrap.querySelector('.phoneNumber');
-      const name = currentUserInfoWrap.querySelector('.name');
-      userName.innerText = ''
-      name.innerText = ''
-      phoneNumber.innerText = ''
-      AchWord.innerText = '';
-      AchWord.style.backgroundColor = 'transparent';
-
-      infoId = sendMesDiv.id;
-    } else {
-      // 第一次创建
-      const wrap = document.createElement('div');
-      wrap.style.width = '445px';
-      wrap.style.marginTop = '0';
-      wrap.style.position = 'relative';
-      wrap.style.height = '125px';
-      wrap.style.display = 'flex';
-      wrap.style.borderBottom = '1px solid rgb(234,234,234)'
-      wrap.style.marginLeft = '200px'
-
-      wrap.className = 'has-information';
-
-      const wrapAchWord = document.createElement('div');
-      wrapAchWord.style.position = 'relative';
-      wrapAchWord.style.display = 'flex';
-      wrapAchWord.style.flexDirection = 'row'
-
-      const AchWord = document.createElement('div');
-      AchWord.innerText = '';
-      AchWord.style.backgroundColor = 'none';
-      AchWord.style.height = '70px';
-      AchWord.style.width = '70px';
-      AchWord.style.display = 'flex';
-      AchWord.style.marginTop = '27px'
-      AchWord.style.borderRadius = '8px'
-
-
-      AchWord.style.justifyContent = 'center';
-      AchWord.style.alignItems = 'center';
-      AchWord.className = 'ach-word';  // 记得打标识以便更新
-      //旁边的具体信息
-      const aside = document.createElement('div');
-      aside.style.display = 'flex';
-      aside.style.flexDirection = 'column'
-      aside.className = 'aside-info'
-      aside.style.marginTop = '27px'
-      aside.style.marginLeft = '15px'
-
-      //创建姓名，昵称和电话号div
-      const userName = document.createElement('div');
-      const name = document.createElement('div');
-      const phoneNumber = document.createElement('div');
-      userName.className = 'userName'
-      name.className = 'name'
-      phoneNumber.className = 'phoneNumber'
-      userName.innerText = ''
-      name.innerText = ''
-      phoneNumber.innerText = ''
-      phoneNumber.style.marginTop = '8px'
-      name.style.marginTop = '8px'
-      name.style.color = 'rgb(192, 192, 192)'
-      phoneNumber.style.color = 'rgb(192, 192, 192)'
-      userName.style.fontWeight = 'bold'
-      name.style.fontSize = '10px'
-      phoneNumber.style.fontSize = '10px'
-
-      wrapAchWord.appendChild(AchWord);
-      aside.appendChild(userName)
-      aside.appendChild(name)
-      aside.appendChild(phoneNumber)
-      wrapAchWord.appendChild(aside)
-      wrap.appendChild(wrapAchWord);
-      userInfopage.appendChild(wrap);
-
-      //创建下方的包裹元素
-      const sendMessageWrap = document.createElement('div')
-      sendMessageWrap.style.display = 'flex'
-      sendMessageWrap, className = 'sendMessageWrap'
-      //创建messa的包裹元素，包括一张图片和发送信息文字
-      const MessageWrap = document.createElement('div')
-      MessageWrap.style.display = 'flex'
-      MessageWrap.style.flexDirection = 'column'
-      MessageWrap.style.marginLeft = '290px'
-      MessageWrap.style.marginTop = '10px'
-      //创建信息div
-      const messageIcon = document.createElement('div')
-      messageIcon.style.height = '44px'
-      messageIcon.style.width = '44px'
-      messageIcon.style.background = 'url(./assets/sendMessageicon.svg) no-repeat';
-      messageIcon.style.backgroundSize = 'contain'
-      messageIcon.className = 'messageIcon'
-
-      const messageContext = document.createElement('div')
-      messageContext.innerText = '发消息'
-      messageContext.style.fontSize = '14px'
-
-      //创建访问网站divwrap
-      const viewNetWrap = document.createElement('div')
-      viewNetWrap.style.display = 'flex'
-      viewNetWrap.style.flexDirection = 'column'
-      viewNetWrap.style.marginLeft = '190px'
-      viewNetWrap.style.marginTop = '10px'
-      //访问网站的图标和下方文字
-      const viewNetIcon = document.createElement('div')
-      viewNetIcon.style.height = '44px'
-      viewNetIcon.style.width = '44px'
-      viewNetIcon.style.background = 'url(./assets/viewNet.svg) no-repeat';
-      viewNetIcon.style.backgroundSize = 'contain'
-      viewNetIcon.className = 'viewNetIcon'
-      const viewNetContext = document.createElement('div')
-      viewNetContext.innerText = '访问网站'
-      viewNetContext.style.fontSize = '14px'
-
-      //
-      MessageWrap.appendChild(messageIcon)
-      MessageWrap.appendChild(messageContext)
-      viewNetWrap.appendChild(viewNetIcon)
-      viewNetWrap.appendChild(viewNetContext)
-
-      sendMessageWrap.appendChild(MessageWrap)
-      sendMessageWrap.appendChild(viewNetWrap)
-      userInfopage.appendChild(sendMessageWrap)
-      currentUserInfoWrap = wrap;
-      currentSendMessageWrap = sendMessageWrap // 设置全局引用
-      infoId = sendMesDiv.id;
-    }
-
-    //下方的聊天跳转按钮
-    document.querySelector('.messageIcon').onclick = () => { changeMessagePage(sendMesDiv.id) }
-
-
-
-  })
 
   //message 页面的点击文件传输助手逻辑
   const fileGroup = document.querySelector('.Message-page .group[id="0"]');
@@ -369,8 +207,9 @@
 
 
   function renderMessagepage() {
+
     //初始化的时候是没颜色的
-    
+
     const MessagePage = document.getElementsByClassName('Message-page')[0];
 
     const Userpage = document.getElementsByClassName('User-page')[0];
@@ -660,6 +499,8 @@
   function renderUserpage() {
     //保证不重叠
 
+
+
     if (currentUserInfoWrap) {
       currentUserInfoWrap.style.display = 'none'
       currentSendMessageWrap.style.display = 'none'
@@ -686,6 +527,165 @@
     userChatimg.style.display = 'flex'
     Userpage.style.display = 'flex';
 
+    //文件传输助手的逻辑
+   
+    const sendMesDiv = document.querySelector('.User-page .user-change[id="user_0"]');
+
+    // 先确保只绑定一次事件
+    if (!sendMesDiv.onclick) {
+      sendMesDiv.onclick = () => {
+        handleUser0Click(); 
+      };
+    }
+
+    // 单独定义点击事件处理函数（便于维护）
+    function handleUser0Click() {
+      document.querySelectorAll('.user-change').forEach(div => {
+        div.style.backgroundColor = 'transparent';
+      });
+      sendMesDiv.style.backgroundColor = 'rgb(225, 221, 227)';
+      location.hash = `#User?id=0`;
+
+      const userInfopage = document.querySelector('#user_right');
+      const userChatimg = document.querySelector('#user-chat');
+      userChatimg.style.display = 'none';
+      userInfopage.style.justifyContent = 'flex-start';
+      userInfopage.style.alignItems = 'flex-start';
+
+      const nameDiv = document.querySelector('.header_span');
+      nameDiv.innerText = '文件传输助手';
+
+      if (currentUserInfoWrap) {
+        const AchWord = currentUserInfoWrap.querySelector('.ach-word');
+        const userName = currentUserInfoWrap.querySelector('.userName');
+        const phoneNumber = currentUserInfoWrap.querySelector('.phoneNumber');
+        const name = currentUserInfoWrap.querySelector('.name');
+
+        userName.innerText = '文件传输助手';
+        name.innerText = '';
+        phoneNumber.innerText = '';
+        AchWord.innerText = '';
+        AchWord.style.backgroundColor = 'transparent';
+
+        currentUserInfoWrap.style.display = 'flex';
+        currentSendMessageWrap.style.display = 'flex';
+        infoId = '0';
+
+      } else {
+        // 创建逻辑（第一次）
+        const wrap = document.createElement('div');
+        wrap.style.width = '445px';
+        wrap.style.marginTop = '0';
+        wrap.style.position = 'relative';
+        wrap.style.height = '125px';
+        wrap.style.display = 'flex';
+        wrap.style.borderBottom = '1px solid rgb(234,234,234)';
+        wrap.style.marginLeft = '200px';
+        wrap.className = 'has-information';
+
+        const wrapAchWord = document.createElement('div');
+        wrapAchWord.style.position = 'relative';
+        wrapAchWord.style.display = 'flex';
+        wrapAchWord.style.flexDirection = 'row';
+
+        const AchWord = document.createElement('div');
+        AchWord.innerText = '';
+        AchWord.style.backgroundColor = 'transparent';
+        AchWord.style.height = '70px';
+        AchWord.style.width = '70px';
+        AchWord.style.display = 'flex';
+        AchWord.style.marginTop = '27px';
+        AchWord.style.borderRadius = '8px';
+        AchWord.style.justifyContent = 'center';
+        AchWord.style.alignItems = 'center';
+        AchWord.className = 'ach-word';
+
+        const aside = document.createElement('div');
+        aside.style.display = 'flex';
+        aside.style.flexDirection = 'column';
+        aside.className = 'aside-info';
+        aside.style.marginTop = '27px';
+        aside.style.marginLeft = '15px';
+
+        const userName = document.createElement('div');
+        const name = document.createElement('div');
+        const phoneNumber = document.createElement('div');
+        userName.className = 'userName';
+        name.className = 'name';
+        phoneNumber.className = 'phoneNumber';
+        userName.innerText = '文件传输助手';
+        name.innerText = '';
+        phoneNumber.innerText = '';
+        phoneNumber.style.marginTop = '8px';
+        name.style.marginTop = '8px';
+        name.style.color = 'rgb(192, 192, 192)';
+        phoneNumber.style.color = 'rgb(192, 192, 192)';
+        userName.style.fontWeight = 'bold';
+        name.style.fontSize = '10px';
+        phoneNumber.style.fontSize = '10px';
+
+        wrapAchWord.appendChild(AchWord);
+        aside.appendChild(userName);
+        aside.appendChild(name);
+        aside.appendChild(phoneNumber);
+        wrapAchWord.appendChild(aside);
+        wrap.appendChild(wrapAchWord);
+        userInfopage.appendChild(wrap);
+
+        const sendMessageWrap = document.createElement('div');
+        sendMessageWrap.style.display = 'flex';
+        sendMessageWrap.className = 'sendMessageWrap';
+
+        const MessageWrap = document.createElement('div');
+        MessageWrap.style.display = 'flex';
+        MessageWrap.style.flexDirection = 'column';
+        MessageWrap.style.marginLeft = '290px';
+        MessageWrap.style.marginTop = '10px';
+
+        const messageIcon = document.createElement('div');
+        messageIcon.style.height = '44px';
+        messageIcon.style.width = '44px';
+        messageIcon.style.background = 'url(./assets/sendMessageicon.svg) no-repeat';
+        messageIcon.style.backgroundSize = 'contain';
+        messageIcon.className = 'messageIcon';
+
+        const messageContext = document.createElement('div');
+        messageContext.innerText = '发消息';
+        messageContext.style.fontSize = '14px';
+
+        const viewNetWrap = document.createElement('div');
+        viewNetWrap.style.display = 'flex';
+        viewNetWrap.style.flexDirection = 'column';
+        viewNetWrap.style.marginLeft = '190px';
+        viewNetWrap.style.marginTop = '10px';
+
+        const viewNetIcon = document.createElement('div');
+        viewNetIcon.style.height = '44px';
+        viewNetIcon.style.width = '44px';
+        viewNetIcon.style.background = 'url(./assets/viewNet.svg) no-repeat';
+        viewNetIcon.style.backgroundSize = 'contain';
+        viewNetIcon.className = 'viewNetIcon';
+
+        const viewNetContext = document.createElement('div');
+        viewNetContext.innerText = '访问网站';
+        viewNetContext.style.fontSize = '14px';
+
+        MessageWrap.appendChild(messageIcon);
+        MessageWrap.appendChild(messageContext);
+        viewNetWrap.appendChild(viewNetIcon);
+        viewNetWrap.appendChild(viewNetContext);
+
+        sendMessageWrap.appendChild(MessageWrap);
+        sendMessageWrap.appendChild(viewNetWrap);
+        userInfopage.appendChild(sendMessageWrap);
+
+        currentUserInfoWrap = wrap;
+        currentSendMessageWrap = sendMessageWrap;
+        infoId = '0';
+      }
+
+      document.querySelector('.messageIcon').onclick = () => { changeMessagePage('0'); };
+    }
 
 
     if (!ifUserRender) {
@@ -997,10 +997,10 @@
     switch (hash) {
       case '#Message': {
         document.querySelectorAll('.Message-page .group')
-        .forEach(g => g.style.backgroundColor = 'transparent');
+          .forEach(g => g.style.backgroundColor = 'transparent');
         renderMessagepage()
-        
-        
+
+
         break
       }
       case '#User': {
